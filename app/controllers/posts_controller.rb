@@ -20,21 +20,23 @@ class PostsController < ApplicationController
    end
 
    def show
-    find_post
+        find_post
    end
+
 
    def update
+        find_post
 
-       if @post.update(post_params)
-           redirect_to @post
-       else
-           render 'edit'
-       end
-   end
+    if @post.update(post_params)
+        redirect_to @post
+    else
+        render 'edit'
+    end
+    end
 
    def edit
-    find_post
-   end
+        find_post
+    end
 
    def destroy
        find_post
