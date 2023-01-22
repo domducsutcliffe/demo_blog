@@ -7,6 +7,5 @@ get 'new', to: 'posts#new'
 
 
 
-
 end
 

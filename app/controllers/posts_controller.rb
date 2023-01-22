@@ -38,13 +38,13 @@ class PostsController < ApplicationController
         find_post
     end
 
-   def destroy
-       find_post
-       @post.destroy
+    def destroy
+		@post = Post.find(params[:id])
+		@post.destroy
 
-       redirect_to posts_path
+		redirect_to posts_path
 
-   end
+	end
 
    private
 
